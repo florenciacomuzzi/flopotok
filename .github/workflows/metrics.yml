@@ -143,3 +143,35 @@ jobs:
           template: classic
           base: repositories
           config_timezone: ${{ secrets.USER_TIMEZONE }}
+
+  terminal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.terminal.svg
+          # You'll need to setup a personal token in your secrets.
+          token: ${{ secrets.METRICS_SECRET }}
+          # GITHUB_TOKEN is a special auto-generated token used for commits
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Options
+          user: flopotok
+          template: terminal
+          base: header, metadata
+          config_timezone: ${{ secrets.USER_TIMEZONE }}
+
+  topics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.topics.svg
+
+          # Options
+          user: flopotok
+          template: terminal
+          base: ''
+          config_timezone: ${{ secrets.USER_TIMEZONE }}
+          plugin_topics: yes
+          plugin_topics_limit: 12
