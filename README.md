@@ -2,7 +2,7 @@
   <img align="center" width="49%" src="./header.svg" />
 </a>
 <a href="https://github.com/flopotok">
-  <img align="center" width="19%" src="./hooked-on-phonics.jpg" />
+  <img align="center" width="29%" src="./hooked-on-phonics.jpg" />
 </a>
 <br/>
 
